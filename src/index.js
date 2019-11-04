@@ -5,6 +5,20 @@ import Vue from 'vue'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
+//1.1导入路由包
+import VueRouter from 'vue-router'
+//1.2安装路由
+Vue.use(VueRouter)
+//1.3导入组件的router.js路由模块
+import router from './router.js'
+
+
+//2.1导入vue-resource
+import VueResource from 'vue-resource'
+//2.2安装vue-resource
+Vue.use(VueResource)
+
+
 Vue.use(MintUI)
 
 // 导入 MUI 的样式
@@ -18,4 +32,6 @@ import app from './App.vue'
 var vm = new Vue({
   el: '#app',
   render: c => c(app),
+   //1.4挂载路由对象到VM实例上
+   router,
 })
