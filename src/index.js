@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2019-11-02 04:54:12
+ * @LastEditTime: 2019-11-07 16:16:32
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \代码\vue-demo\src\index.js
+ */
 // 入口文件
 import Vue from 'vue'
 
@@ -33,17 +41,22 @@ import './lib/mui/css/icons-extra.css'
 // 导入 App 根组件
 import app from './App.vue'
 
-//安装包，node阶段学习，格式化时间
+// 导入时间插件
 import moment from 'moment'
-//定义全局的过滤器
+
+// 定义全局的过滤器
 Vue.filter('dateFormat', function (datastr, pattern = "YYYY-MM-DD HH:mm:ss") {
   return moment(datastr).format(pattern)
 })
 
+// 导入缩略图
+import VuePreview from 'vue-preview'
+// defalut install
+Vue.use(VuePreview)
 
 var vm = new Vue({
   el: '#app',
   render: c => c(app),
-   //1.4挂载路由对象到VM实例上
-   router,
+  //1.4挂载路由对象到VM实例上
+  router,
 })

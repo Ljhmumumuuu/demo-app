@@ -1,4 +1,5 @@
 {
   "presets": ["@babel/preset-env"],
-  "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-class-properties"]
+  "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-class-properties","transform-remove-strict-mode"],
+  "ignore": [ "lib/mui/js/mui.min.js" ]
 }
