@@ -1,18 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:42:36
- * @LastEditTime: 2019-11-05 07:17:52
+ * @LastEditTime: 2019-11-09 16:02:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \代码\vue-demo\src\components\tabbar\HomeContainer.vue
  -->
 <template>
   <div>
-    <mt-swipe :auto="4000">
+    <!-- 轮播图 -->
+    <swiper :lunbotuList="lunbotuList" :isfull="true"></swiper>
+    <!-- <mt-swipe :auto="4000">
       <mt-swipe-item v-for="item in lunbotuList" :key="item.id">
         <img :src="item.imgurl" alt="" />
       </mt-swipe-item>
-    </mt-swipe>
+    </mt-swipe> -->
 
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
@@ -58,6 +60,8 @@
 </template>
 
 <script>
+import swiper from "../subcomponents/swiper.vue";
+
 //本地图片获取
 export default {
   data() {
@@ -69,6 +73,9 @@ export default {
         { id: 4, imgurl: "./src/images/cat4.png" }
       ]
     };
+  },
+  components: {
+    swiper
   }
 };
 </script>

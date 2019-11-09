@@ -121,7 +121,7 @@ export default {
     //使用js的形式进行路由导航
     goDetail(id) {
       //注意：一定要区分this.$route和this.$router 这两个对象
-      //其中:this.$router 是路由【参数对象】，所有路由中的参数，params,query都属于
+      //其中:this.$route 是路由【参数对象】，所有路由中的参数，params,query都属于
       //其中:this.$router 是一个【路由导航对象】，用它 可以方便的使用js代码，实现路由的前进、后退、跳转到新的URL地址
 
       // https://router.vuejs.org/zh/guide/essentials/navigation.html

@@ -1,6 +1,5 @@
 <template>
   <div class="goodsinfo-container">
-
     <!-- 半场动画，只能使用钩子函数 -->
     <transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter">
       <div class="ball" v-show="ballFlag" ref="ball"></div>
@@ -87,7 +86,7 @@ export default {
       selectedCount: 1 //保存用户选中的商品数量，默认，认为用户买一个
     };
   },
-  creater() {
+  created() {
     /*  this.getLunbotu();
     this.getGoodsInfo(); */
   },

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-02 04:54:12
- * @LastEditTime: 2019-11-07 16:53:01
+ * @LastEditTime: 2019-11-09 20:52:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \代码\vue-demo\src\App.vue
@@ -9,7 +9,7 @@
 <template>
   <div class="app-container">
     <!-- 顶部 Header 区域 -->
-    <mt-header fixed title="fixed top"></mt-header>
+    <mt-header fixed title="Vue"></mt-header>
 
     <!-- 中间的 路由 router-view 区域 -->
     <transition>
@@ -27,7 +27,7 @@
       </router-link>
       <router-link class="mui-tab-item-lib" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-          <span class="mui-badge">0</span></span
+          <span class="mui-badge" id="badge">0</span></span
         >
         <span class="mui-tab-label">购物车</span>
       </router-link>
